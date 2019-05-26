@@ -14,6 +14,9 @@ dependencies:
   - opencv
   - jupyter_contrib_nbextensions
   - imbalanced-learn
+  - scikit-learn
+  - seaborn
+  - tqdm
   - pip:
       - nvidia-ml-py3
       - dataclasses

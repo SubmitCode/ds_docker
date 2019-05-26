@@ -43,20 +43,21 @@ RUN conda env create -f enviroment.yaml
 # copy jupyter config and certificate
 COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 COPY keys/privkey.pem /root/.jupyter/privkey.pem
-COPY keys/fullchain.pem /root/.jupyter/fullchain.pem
+#COPY keys/fullchain.pem /root/.jupyter/fullchain.pem
+COPY keys/cert.pem /root/.jupyter/cert.pem
 
 # Activate Source
 #CMD source activate fastai
 CMD source ~/.bashrc
 
 # install codeserver
-RUN mkdir /code-server && \
-    cd /code-server && \
-    wget https://github.com/codercom/code-server/releases/download/1.32.0-310/code-server-1.32.0-310-linux-x64.tar.gz && \
-    chmod +x code-server-1.32.0-310-linux-x64.tar.gz && \
-    tar -zxvf code-server-1.32.0-310-linux-x64.tar.gz 
-COPY keys/privkey.pem /code-server/privkey.pem
-COPY keys/fullchain.pem /code-server/fullchain.pem
+#RUN mkdir /code-server && \
+#    cd /code-server && \
+#    wget https://github.com/codercom/code-server/releases/download/1.32.0-310/code-server-1.32.0-310-linux-x64.tar.gz && \
+#    chmod +x code-server-1.32.0-310-linux-x64.tar.gz && \
+#    tar -zxvf code-server-1.32.0-310-linux-x64.tar.gz 
+#COPY keys/privkey.pem /code-server/privkey.pem
+#COPY keys/fullchain.pem /code-server/fullchain.pem
 
 
 WORKDIR /research
