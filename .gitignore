@@ -103,7 +103,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# vscode
+.vscode/*
+
 # custom
 *.pem
 *.tar.gz
 code-server*
+*.tar
