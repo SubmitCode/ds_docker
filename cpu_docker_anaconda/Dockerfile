@@ -34,6 +34,9 @@ RUN jupyter contrib nbextension install --user
 
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
+
+WORKDIR /research
+RUN chmod -R a+w /research
+
 COPY run.sh /run.sh
 CMD ["/run.sh"]
-# CMD [ "/bin/bash" ]

@@ -111,3 +111,4 @@ venv.bak/
 *.tar.gz
 code-server*
 *.tar
+*.zip*
