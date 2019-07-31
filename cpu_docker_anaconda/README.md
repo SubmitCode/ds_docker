@@ -2,8 +2,7 @@
 
 ## Task List
 - [x] create first working version
-- [ ] Test offline installation
-- [ ] Open a pull request
+- [x] Test offline installation
 
 ## Preparation
 ### Password 
