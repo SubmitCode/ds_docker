@@ -19,7 +19,7 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_6
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate base" >> ~/.bashrc
 
-RUN apt-get install -y curl grep sed dpkg && \
+RUN apt-get install -y curl grep sed dpkg graphviz && \
     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` && \
     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb && \
     dpkg -i tini.deb && \
@@ -39,4 +39,5 @@ WORKDIR /research
 RUN chmod -R a+w /research
 
 COPY run.sh /run.sh
+RUN chmod -R +x /run.sh
 CMD ["/run.sh"]
