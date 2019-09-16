@@ -33,9 +33,7 @@ set the proper `c.NotebookApp.port = 8005`
     ([load Docker](https://docs.docker.com/engine/reference/commandline/load/))
     if case you have a multipart file run first `cat image.zip* > ~/docker_images/image.zip`
     ```
-    
     unzip image.zip
-    docker save -o <path where image.tar should be saved> docker_cpu_anaconda
     ```
     Copy the docker to the offline location. There you have to
     uncompress the tar file with the software availiable. 
