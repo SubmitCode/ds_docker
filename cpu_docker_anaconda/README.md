@@ -43,6 +43,6 @@ set the proper `c.NotebookApp.port = 8005`
     
 3. Run the docker
     ```
-    docker run -d --name cpu_anaconda -p 8005:8005 -v C:\research\test:/research -v c:\research\data:/research/data  cpu_anaconda 
+    docker run -d --name cpu_anaconda --privileged -p 8005:8005 -v C:\research\test:/research -v c:\research\data:/research/data  cpu_anaconda 
     ```
     
